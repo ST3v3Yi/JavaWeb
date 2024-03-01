@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementById</title>
+    <script type="text/javascript">
+        function onclickFunc(){
+            var nameObj = document.getElementById('userName');
+            var userNameSpanObj = document.getElementById('userNameSpan');
+            //  innerHTML 表示起始标签与结束标签之间的内容
+            // innerHTML 可读可写
+            // userNameSpanObj.style.color = "green";
+            var userNameText = nameObj.value;
+            //验证字符串===》正则表达式
+            var patt = /^\w{5,12}$/;
+            if(patt.test(userNameText)) {
+                userNameSpanObj.innerHTML = "<img src=\"right.png\" width=\"20\" height=\"20\" alt=\"✔\" />用户名符合标准！";
+                userNameSpanObj.style.color = "green";
+            } else {
+                userNameSpanObj.innerHTML = "<img src=\"wrong.png\" width=\"20\" height=\"20\" alt=\"❌\" />用户名不符合标准！";
+                userNameSpanObj.style.color = "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    用户名：<input type="text" id="userName"/>
+    <span id="userNameSpan">
+
+    </span>
+    <br/>
+    <button onclick="onclickFunc()">校验</button>
+</body>
+</html>

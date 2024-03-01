@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onsubmit事件</title>
+    <script type="text/javascript">
+        function submitFunc() {
+            alert("静态注册表单提交事件 —— 不合法");
+            return false;
+        }
+        window.onload = function (){
+            var formObj = document.getElementById('form01');
+            formObj.onsubmit = function () {
+                alert("动态注册表单提交事件 —— 不合法");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 在静态注册时，onsubmit="return function()" -->
+    <form action="http://localhost:8080" method="post" onsubmit="return submitFunc()">
+        <table align="center"><!-- 利用表格使得表单显示工整有序 -->
+            <tr>
+                <td><input type="submit" value="静态注册"/></td>
+            </tr>
+        </table>
+    </form>
+    <!-- 在动态注册时，一定是给form表单提供ID -->
+    <form action="http://localhost:8080" method="post" id="form01">
+        <table align="center"><!-- 利用表格使得表单显示工整有序 -->
+            <tr>
+                <td><input type="submit" value="动态注册"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onblur事件</title>
+    <script type="text/javascript">
+        //  静态注册失去焦点事件
+        function onblurFunc() {
+            console.log("静态注册失去焦点事件");
+        }
+        window.onload = function () {
+            var pswObj = document.getElementById('psw');
+            pswObj.onblur = function () {
+                console.log("动态注册失去焦点事件");
+            }
+        }
+    </script>
+</head>
+<body>
+    用户昵称：<input type="text" onblur="onblurFunc()"/><br/>
+    用户密码：<input type="password" id="psw"/>
+</body>
+</html>

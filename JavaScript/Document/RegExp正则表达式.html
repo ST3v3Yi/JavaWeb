@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+    <script type="text/javascript">
+        //  字符串中是否包含字母e
+        // var patt = new RegExp("e");
+        // var patt = /e/;
+        //  字符串中是否包含a或b或c
+        // var patt = /[abc]/;
+        //  字符串中是否包含abc以外的字符
+        // var patt = /[^abc]/;
+        //  字符串中是否包含小写字母
+        // var patt = /[a-z]/;
+        //  字符串中是否包含大写字母
+        // var patt = /[A-Z]/;
+        //  字符串中是否包含任意数字
+        // var patt = /[0-9]/;
+        //  字符串中是否包含字母、数字、下划线
+        // var patt = /\w/;
+        //  字符串中是否包含至少包含一个a
+        // var patt = /a+/;
+        //  字符串中是否包含零个或多个a
+        // var patt = /a*/;
+        //  字符串中是否包含零个或多个a
+        // var patt = /a*/;
+        //  字符串中是否包含零个或一个a
+        // var patt = /a?/;
+        //  字符串中是否包含X个连续的a
+        // var patt = /a{X}/;
+        //  字符串中是否包含至少X个至多Y个连续的a
+        // var patt = /a{X,Y}/;
+        //  字符串中是否包含至少X个连续的a
+        // var patt = /a{X,}/;
+        //  字符串中是否以a结尾
+        // var patt = /a$/;
+        //  字符串中是否以a开始
+        // var patt = /^a/;
+        //  字符串中是否从头到尾完全匹配
+        // var patt = /^a{3,5}$/;
+        var patt = /^\w{5,12}$/;
+        var str = "aaaa_123";
+        alert(patt.test(str));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

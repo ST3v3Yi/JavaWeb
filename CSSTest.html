@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Test</title>
+    <link rel="stylesheet" type="text/css" href="CSS/css01.css" />
+    <style type="text/css">
+        #div01 {
+            text-align: center;
+            color: black;
+            border: 1px solid blue;
+            width: 100px;
+            height: 100px;
+        }/* ID不可重复 */
+        .div02{
+            text-align: center;
+            color: black;
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }/* class类别可以重复 */
+        .div02, #div01{
+            font-size: 18px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #div03{
+            width: 500px;
+            height: 500px;
+            margin: 5px auto;
+            border: 1px solid black;
+            text-align: center;
+            table {
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>123</p>
+    <p id="abc">123</p>
+    <div id="div01">内容</div>
+    <div id="div02">内容</div>
+    <div class="div02">内容</div>
+    <div class="div02">内容</div>
+</body>
+</html>

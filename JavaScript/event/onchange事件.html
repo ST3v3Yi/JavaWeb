@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange事件</title>
+    <script type="text/javascript">
+        function onchangeFunc() {
+            alert('选项已改变[静态注册]');
+        }
+        window.onload = function () {
+            var selectObj = document.getElementById('select');
+            selectObj.onchange = function () {
+                alert('选项已改变[动态注册]');
+            }
+        }
+    </script>
+</head>
+<body>
+    请选择你的爱好：
+    <select onchange="onchangeFunc()">
+        <option>Java</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>Python</option>
+    </select><br/>
+    请选择你的性别：
+    <select id="select">
+        <option>男</option>
+        <option>女</option>
+        <option>武装直升机</option>
+    </select>
+</body>
+</html>
